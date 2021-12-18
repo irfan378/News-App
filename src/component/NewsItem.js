@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
 
 export class NewsItem extends Component {
-    constructor() {
-        super();
-        this.state = {
 
-        }
-    }
     render() {
 
-        let { title, description, imageUrl, newsUrl } = this.props;
+        let { title, description, imageUrl, NewsUrl } = this.props;
         return (
             <div className='my-3'>
                 <div className="card" style={{ width: "18rem" }}>
@@ -17,12 +12,13 @@ export class NewsItem extends Component {
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{description}</p>
-                        <a href="/newsDetail" className="btn btn-sm btn-primary">Read More</a>
+                        <a href={NewsUrl} className="btn btn-sm btn-primary">Read More</a>
                     </div>
                 </div>
             </div >
         )
     }
 }
+
 
 export default NewsItem
